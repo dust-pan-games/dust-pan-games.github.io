@@ -1,0 +1,19 @@
+---
+layout: default
+title: Character Generator
+---
+<form action="" id="nothing">
+	<label>
+		Character output option
+	</label>
+	<select id="char-sheet">
+		<option value="text">Plain text</option>
+		<option selected="selected" value="html">Character sheet</option>
+	</select>
+	<br>
+	<br>
+	<input type="button" value="Generate Character" id="but" onclick="generate()" />
+</form>
+<br><br>
+<div class="aaie-character" id="generator-output"></div>
+<script src="/assets/js/generators/character/generator.js"></script>

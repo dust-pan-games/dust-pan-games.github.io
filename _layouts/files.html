@@ -1,0 +1,17 @@
+---
+layout: default
+---
+{% for f in site.data.files %}
+    {% if f.id == page.filesid %}
+    <h2>{{ f.description }}</h2>
+    <ul class="files-list">
+    {% for file in f.files %}
+      <li>
+        <a href="{{ file.filefolder }}/{{ file.name }}" title="{{ file.text }}">
+          {{ file.text }}
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endfor %}

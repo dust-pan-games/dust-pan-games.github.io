@@ -1,0 +1,63 @@
+body {
+    background-color: black;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav {
+    background-color: white;
+}
+
+nav ul.main {
+    font-weight: bold;
+}
+
+nav ul.sub {
+    font-weight: normal;
+}
+
+nav ul li {
+    list-style-type:none;
+    text-transform: uppercase;
+}
+
+nav ul li a {
+    color: #298cca;
+    font-size: 12px;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+.content {
+    background-color: white;
+}
+
+div.aaie-character table {
+    width: auto;
+}
+
+div.aaie-character table tbody {
+    border: none;
+}
+
+div.aaie-character table tr {
+    background-color: white;
+}
+
+ul.files-list li {
+    list-style-type: none;
+}
+
+ul.files-list li a {
+    background-image: url('/assets/img/downloads-icon.png');
+    background-repeat: no-repeat;
+    display: block;
+    height: 64px;
+    padding-left: 74px;
+    padding-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
