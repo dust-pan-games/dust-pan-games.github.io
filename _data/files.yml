@@ -1,0 +1,18 @@
+- id: aaie
+  description:
+  filefolder: /assets/files/aaie
+  files:
+  - name: Amazing Adventurers and Incredible Exploits.pdf
+    text: Amazing Adventurers and Incredible Exploits (AAIE) playtest rules
+  - name: AAIE Character Creation Summary.pdf
+    text: AAIE character creation summary
+  - name: AAIE Player Reference Sheet.pdf
+    text: AAIE player reference sheet
+  - name: AAIE Character Sheet.pdf
+    text: AAIE character sheet
+- id: phase
+  description: 
+  filefolder: /assets/files/phase-abandon
+  files:
+  - name: Phase Abandon.pdf
+    text: Phase Abandon rules

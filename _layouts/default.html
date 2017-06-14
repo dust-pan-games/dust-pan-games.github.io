@@ -3,27 +3,50 @@
 		<head>
 			<title>{{ page.title }}</title>
 			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
+			<link rel="stylesheet" type="text/css" href="/assets/css/foundation.css">
+		    <link rel="stylesheet" type="text/css" href="/assets/css/app.css">
 		</head>
 		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/cv">CV</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-	    		</ul>
-			</nav>
-			<div class="container">
-			
-			{{ content }}
-			
-			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-	        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-				</ul>
-			</footer>
+			<div class="row">
+				<div class="large-12 columns">
+					<img class="logo" alt="Dust Pan Games" src="/assets/img/logo.jpg" />
+				</div>
+			</div>
+    		<div class="row content">
+				<div class="large-2 medium-2 columns">
+					<nav>
+			    		<ul class="main">
+			        		<li><a href="/">Home</a></li>
+				        	<li><a href="/aaie">AAIE</a></li>
+								<ul class="sub">
+									<li><a href="/aaie/character-generator">Character Generator</a></li>
+									<li><a href="/aaie/aaie-files">Files</a></li>
+									<li><a href="/aaie/sample-characters">Sample Characters</a></li>
+									<ul class="sub">
+										<li><a href="/aaie/sample-characters/koodor">Koodor Level 1 Wizard</a></li>
+										<li><a href="/aaie/sample-characters/phill">Phill level 3 Warrior</a></li>
+										<li><a href="/aaie/sample-characters/redrel">Redrel Level 1 Thief</a></li>
+										<li><a href="/aaie/sample-characters/temo">Temo Level 1 Priest</a></li>
+										<li><a href="/aaie/sample-characters/wenbul">Wenbul Level 1 Warrior</a></li>
+									</ul>
+								</ul>
+			        		<li><a href="/phase-abandon">Phase Abandon</a></li>
+								<ul class="sub">
+									<li><a href="/phase-abandon/phase-abandon-files">Files</a></li>
+								</ul>
+			        		<li><a href="http://dustpangames.blogspot.com/">Blog</a></li>
+							<li><a href="/videos">Videos</a></li>
+			    		</ul>
+					</nav>
+				</div>
+				<div class="large-10 medium-10 columns content">
+					<h1>{{ page.title }}</h1>
+					{{ content }}
+				</div>
+			</div>
+			<script src="/assets/js/vendor/jquery.js"></script>
+			<script src="/assets/js/vendor/what-input.js"></script>
+			<script src="/assets/js/vendor/foundation.js"></script>
+			<script src="/assets/js/app.js"></script>
 		</body>
 	</html>
