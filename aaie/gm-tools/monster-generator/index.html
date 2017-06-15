@@ -1,0 +1,26 @@
+---
+layout: default
+title: Monster Generator
+---
+<form action="" id="nothing" onsubmit="handleFormSubmit(this)">
+    <label for="numberOfMonsters">Select the number of monsters to generate</label>
+    <br>
+    <select id="numberOfMonsters" name="numberOfMonsters">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option selected="selected" value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <br>
+    <br>
+    <input type="submit" value="Generate Monsters" />
+</form>
+<p id="generator-output"></p>
+<script src="/assets/js/generators/monster/data/attack-names.js"></script>
+<script src="/assets/js/generators/monster/generator.js"></script>
