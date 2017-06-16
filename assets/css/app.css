@@ -61,3 +61,11 @@ ul.files-list li a {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+td.attack-name {
+    text-transform:capitalize;
+}
+
+td.monster-name {
+    text-transform:capitalize;
+}
