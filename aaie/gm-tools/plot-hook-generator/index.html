@@ -19,6 +19,15 @@ title: Plot Hook Generator
     </select>
     <br>
     <br>
-    <input type="button" value="Generate Plot Hook(s)" id="but" onclick="generate()" />
+    <input type="button" value="Generate Plot Hook(s)" id="but" onclick="generatePlotHooks()" />
 </form>
-<p id="generator-output"></p>
+<table id="plot-hook-table" style="display:none;">
+    <thead>
+        <th>
+            Plot hooks
+        </th>
+    </thead>
+    <tbody id="plot-hook-table-body"></tbody>
+</table>
+<script src="/assets/js/generators/plot-hook/data/data.js"></script>
+<script src="/assets/js/generators/plot-hook/generator.js"></script>

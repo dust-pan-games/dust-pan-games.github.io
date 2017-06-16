@@ -69,3 +69,7 @@ td.attack-name {
 td.monster-name {
     text-transform:capitalize;
 }
+
+td.plot-hook {
+    text-transform:capitalize;
+}
