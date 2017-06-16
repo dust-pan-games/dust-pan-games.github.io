@@ -2,7 +2,7 @@
 layout: default
 title: Monster Generator
 ---
-<form action="" id="nothing" onsubmit="handleFormSubmit(this)">
+<form action="" id="nothing">
     <label for="numberOfMonsters">Select the number of monsters to generate</label>
     <br>
     <select id="numberOfMonsters" name="numberOfMonsters">
@@ -19,8 +19,39 @@ title: Monster Generator
     </select>
     <br>
     <br>
-    <input type="submit" value="Generate Monsters" />
+    <input type="button" value="Generate Monster(s)" id="but" onclick="generateMonsters()" />
 </form>
-<p id="generator-output"></p>
+<table id="monster-table" border="1" bordercolor="#888" cellspacing="0" style="display:none;border-collapse:collapse;border-color:rgb(136,136,136);border-width:1px;">
+    <thead>
+        <th>
+            Monster name
+        </th>
+        <th>
+            Level
+        </th>
+        <th>
+            Resolve<br>dice
+        </th>
+        <th>
+            Resolve<br>pool
+        </th>
+        <th>
+            Armor
+        </th>
+        <th>
+            Attack<br>dice
+        </th>
+        <th>
+            Attacks per<br>round
+        </th>
+        <th>
+            Special Attacks
+        </th>
+    </thead>
+    <tbody id="monster-table-body"></tbody>
+</table>
 <script src="/assets/js/generators/monster/data/attack-names.js"></script>
+<script src="/assets/js/generators/monster/data/monster-names.js"></script>
+<script src="/assets/js/generators/monster/data/stats.js"></script>
+<script src="/assets/js/generators/monster/output.js"></script>
 <script src="/assets/js/generators/monster/generator.js"></script>
