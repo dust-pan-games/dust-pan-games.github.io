@@ -5,6 +5,15 @@
 			<!-- link to main stylesheet -->
 			<link rel="stylesheet" type="text/css" href="/assets/css/foundation.css">
 		    <link rel="stylesheet" type="text/css" href="/assets/css/app.css">
+			<script>
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+				ga('create', 'UA-99844605-1', 'auto');
+				ga('send', 'pageview');
+			</script>
 		</head>
 		<body>
 			<div class="row">
@@ -12,8 +21,12 @@
 					<img class="logo" alt="Dust Pan Games" src="/assets/img/logo.jpg" />
 				</div>
 			</div>
+			<div class="title-bar" data-responsive-toggle="menu" data-hide-for="medium">
+				<button class="menu-icon" type="button" data-toggle="menu"></button>
+				<div class="title-bar-title">Menu</div>
+			</div>
     		<div class="row content">
-				<div class="large-3 medium-3 small-12 columns">
+				<div id="menu" class="large-3 medium-3 small-12 columns">
 					<nav>
 			    		<ul class="main">
 			        		<li><a href="/">Home</a></li>
@@ -41,8 +54,10 @@
 								</ul>
 							<li><a href="/other-games/">Other Games</a></li>
 								<ul class="sub">
+									<li><a href="/other-games/afternoon-scifi-movie-hour/">Afternoon Scifi Movie Hour</a></li>
 									<li><a href="/other-games/dice-chess/">Dice Chess</a></li>
 									<li><a href="/other-games/down-on-mill-road/">Down on Mill Road</a></li>
+									<li><a href="/other-games/tracy-is-dead/">Tracy is Dead</a></li>
 								</ul>
 			        		<li><a href="http://dustpangames.blogspot.com/">Blog</a></li>
 							<li><a href="/videos/">Videos</a></li>
