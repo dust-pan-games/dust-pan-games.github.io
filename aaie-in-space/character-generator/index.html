@@ -1,0 +1,24 @@
+---
+layout: default
+title: Character Generator
+---
+<form action="" id="nothing">
+	<label>
+		Character output option
+	</label>
+	<select id="char-sheet">
+		<option selected="selected" value="text">Plain text</option>
+		<option value="html">Character sheet</option>
+	</select>
+	<br>
+	<br>
+	<input type="button" value="Generate Character" id="but" onclick="generate()" />
+</form>
+<br><br>
+<div class="aaie-character" id="generator-output"></div>
+<script src="/assets/js/generators/aais-character/data/gravity.js"></script>
+<script src="/assets/js/generators/aais-character/data/planets.js"></script>
+<script src="/assets/js/generators/aais-character/objects.js"></script>
+<script src="/assets/js/generators/aais-character/stats.js"></script>
+<script src="/assets/js/generators/aais-character/output.js"></script>
+<script src="/assets/js/generators/aais-character/generator.js"></script>
