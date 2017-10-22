@@ -5,27 +5,24 @@ var ages = [];
 
 function generate()
 {
-    character = new aaieCharacter();
+    character = new aaisCharacter();
 
     generateGravity();
     generatePlanet();
     generateStats();
-    /*
     generateAge();
-    generateRace();
-    generateAttributes();
-    generateHistory();
+    generateCareers();
+    generateEquipment();
+    generateWeapons();
+    /*
     generateArmor();
     generateConnections();
     generateClass();
-    generateWeapons();
-    generateEquipment();
     generateAbilities();
     generatePersonality();
     generateDiety();
     generateMutations();
     statCheck();
-    generateSpells();
     */
     generateOutput();
 }

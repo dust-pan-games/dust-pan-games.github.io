@@ -457,40 +457,32 @@ function generateTextOutput()
 {
     var output = document.getElementById("generator-output");
     var outputHTML = "";
-    //outputHTML += "<br>Age: " + ages[character.age].name;
-    //outputHTML += "<br>Race: " + races[character.race].name;
-    //outputHTML += "<br>Class: " + classes[character.class].name;
+    outputHTML += "Age: " + AGES[character.age].name;
     outputHTML += "<br>Brawn: " + character.brawn;
     outputHTML += "<br>Athleticism: " + character.athleticism;
     outputHTML += "<br>Resolve: " + character.resolve;
     outputHTML += "<br>Academics: " + character.academics;
     outputHTML += "<br>Knowledge: " + character.knowledge;
     outputHTML += "<br>Attractiveness: " + character.attractiveness;
+    outputHTML += "<br>Mutation Limit: " + character.mutationLimit;
     outputHTML += "<br>Resolve Pool: " + character.resolvePool + "/" + character.resolvePool;
-    //outputHTML += "<br>Armor type: " + armors[character.armorType].name;
-    outputHTML += "<br>Armor score: " + character.armor;
+    outputHTML += "<br>Homeworld: " + GRAVITIES[character.gravity].name + " " + PLANETS[character.planet].name + " - "
+                    + PLANETS[character.planet].description;
+    outputHTML += "<br>Physical description: " + GRAVITIES[character.gravity].description;
 
     outputHTML += "<br><br><b>Careers</b>";
 
     for(var c = 0; c < character.careers.length; c++)
     {
-        outputHTML += "<br>" + careers[character.careers[c]].name;
+        outputHTML += "<br>" + character.careers[c].name + " - " + character.careers[c].attribute + " - " + character.careers[c].description;
+
+        if(character.careers[c].specialty != "")
+        {
+            outputHTML += "<br>- Specialty: " + character.careers[c].specialty.name + " - " + character.careers[c].specialty.description;
+        }
     }
 
-    outputHTML += "<br><br><b>Skills</b>";
-
-    for(var s = 0; s < character.skills.length; s++)
-    {
-        outputHTML += "<br>" + character.skills[s];
-    }
-
-    outputHTML += "<br><br><b>Connection Types</b>";
-
-    for(var i = 0; i < character.connectionTypes.length; i++)
-    {
-        outputHTML += "<br>" + character.connectionTypes[i];
-    }
-
+    /*
     outputHTML += "<br><br><b>Connection</b>";
 
     for(var i = 0; i < character.connections.length; i++)
@@ -518,24 +510,7 @@ function generateTextOutput()
                 break;
         }
     }
-
-    outputHTML += "<br><br><b>Racial Ability</b>";
-    outputHTML += "<br>" + character.racialAbilities[0];
-
-    outputHTML += "<br><br><b>Class Abilities</b>";
-
-    for(var j = 0; j < character.classAbilities.length; j++)
-    {
-        if(character.classAbilities[j].shortDescription != "")
-        {
-            outputHTML += "<br>" + character.classAbilities[j].name + " - " +
-                                    character.classAbilities[j].shortDescription;
-        }
-        else
-        {
-            outputHTML += "<br>" + character.classAbilities[j].name;
-        }
-    }
+    */
 
     if(character.mutationCount > 0)
     {
@@ -546,57 +521,69 @@ function generateTextOutput()
                             character.mutations[j].description + "<br>";
         }
     }
-    /*
-    if(character.spells.length > 0)
-    {
-        outputHTML += "<br><br><b>Spells</b>";
-
-        for(var j = 0; j < character.spells.length; j++)
-        {
-            outputHTML += "<br>" + character.spells[j].name;
-            outputHTML += " (" + character.spells[j].type + ") ";
-            outputHTML += " - Has an effect die of " + character.spells[j].die;
-            outputHTML += " - Effecting " + character.spells[j].effect;
-            outputHTML += " - Costing " + character.spells[j].cost + " Mysticism / Focus";
-        }
-    }
-    */
 
     /*
-    if(character.spellKeywords.length > 0)
-    {
-        outputHTML += "<br><br><b>Spell keywords</b>";
-
-        for(var j = 0; j < character.spellKeywords.length; j++)
-        {
-            outputHTML += "<br>" + character.spellKeywords[j];
-        }
-    }
-    */
-
     outputHTML += "<br><br><b>Weapon Skills</b>";
 
     for(var j = 0; j < character.weaponSkills.length; j++)
     {
         outputHTML += "<br>" + character.weaponSkills[j];
     }
+    */
 
     outputHTML += "<br><br><b>Weapons</b>";
 
     for(var j = 0; j < character.weapons.length; j++)
     {
-        outputHTML += "<br>" + character.weapons[j].name;
+        /*
+        x this.name = "";
+        x this.attribute = "";
+        x this.damage = "";
+        x this.damageModifier = "";
+        x this.rof = "";
+        x this.concealment = "";
+        x this.ammo = "";
+        x this.size = "";
+        this.descriptors = [];
+        */
+        outputHTML += "<br><ul>";
+        outputHTML += "<li>" + character.weapons[j].size + " " + character.weapons[j].name + "</li>";
+        outputHTML += "<li>Attribute: " + character.weapons[j].attribute + "</li>";
+        outputHTML += "<li>Ammo: " + character.weapons[j].ammo + "</li>";
+        outputHTML += "<li>Damage: " + character.weapons[j].damage + ", " + character.weapons[j].damageModifier + "</li>";
+        outputHTML += "<li>Rate of fire: " + character.weapons[j].rof + "</li>";
+        outputHTML += "<li>Concealment: " + character.weapons[j].concealment + "</li>";
+
+        if( character.weapons[j].descriptors.length > 0)
+        {
+            outputHTML += "<li>Descriptors:";
+            outputHTML += "<ul>";
+
+            for(var k = 0; k < character.weapons[j].descriptors.length; k++)
+            {
+                outputHTML += "<li>" + character.weapons[j].descriptors[k].name
+                                + " - " + character.weapons[j].descriptors[k].description
+                                + "</li>";
+            }
+
+            outputHTML += "</ul></li>";
+        }
+        
+        outputHTML += "</ul>"
     }
+
 
     outputHTML += "<br><br><b>Equipment</b>";
     outputHTML += "<br>" + character.equipment[0];
 
+    /*
     outputHTML += "<br><br><b>Personality quirks</b>";
 
     for(var j = 0; j < character.quirks.length; j++)
     {
         outputHTML += "<br>" + character.quirks[j];
     }
+    */
 
     output.innerHTML = outputHTML;
 }

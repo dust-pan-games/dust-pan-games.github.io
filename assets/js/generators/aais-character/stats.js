@@ -1,3 +1,9 @@
+function generateAge()
+{
+    character.age = Math.floor(Math.random() * AGES.length);
+    character.careerCount = AGES[character.age].careers;
+}
+
 function generateGravity()
 {
     character.gravity = Math.floor(Math.random() * GRAVITIES.length);
@@ -45,7 +51,7 @@ function generateStats()
         character.attractiveness += Math.floor(Math.random() * PLANETS[character.planet].attractivenessDice) + 1;
     }
 
-    character.resolvePool = character.resolve * 5;
-
+    character.resolvePool = character.resolve * 10;
+    character.resolvePool += AGES[character.age].resolvePool;    
     character.mutationCount += PLANETS[character.planet].mutations;
 }
