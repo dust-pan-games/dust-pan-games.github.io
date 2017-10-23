@@ -11,6 +11,7 @@ function generateWeapons()
     weapon.name                     = WEAPON_TYPES[typeNumber].name;
     weapon.attribute                = WEAPON_TYPES[typeNumber].attribute;
     weapon.rof                      = WEAPON_TYPES[typeNumber].rof;
+    weapon.range                    = WEAPON_TYPES[typeNumber].range;
     weapon.damageModifier           = WEAPON_TYPES[typeNumber].damage;
     weapon.concealment              = WEAPON_TYPES[typeNumber].concealment;
     weapon.size                     = WEAPON_DAMAGE[damageNumber].name;

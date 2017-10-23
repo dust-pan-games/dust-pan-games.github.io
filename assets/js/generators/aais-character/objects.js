@@ -43,6 +43,7 @@ function aaisWeapon()
     this.damage = "";
     this.damageModifier = "";
     this.rof = "";
+    this.range = "";
     this.concealment = "";
     this.ammo = "";
     this.size = "";

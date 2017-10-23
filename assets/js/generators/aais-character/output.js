@@ -549,6 +549,7 @@ function generateTextOutput()
         outputHTML += "<br><ul>";
         outputHTML += "<li>" + character.weapons[j].size + " " + character.weapons[j].name + "</li>";
         outputHTML += "<li>Attribute: " + character.weapons[j].attribute + "</li>";
+        outputHTML += "<li>Range: " + character.weapons[j].range + "</li>";
         outputHTML += "<li>Ammo: " + character.weapons[j].ammo + "</li>";
         outputHTML += "<li>Damage: " + character.weapons[j].damage + ", " + character.weapons[j].damageModifier + "</li>";
         outputHTML += "<li>Rate of fire: " + character.weapons[j].rof + "</li>";
@@ -568,7 +569,7 @@ function generateTextOutput()
 
             outputHTML += "</ul></li>";
         }
-        
+
         outputHTML += "</ul>"
     }
 
